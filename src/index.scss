@@ -1,0 +1,107 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  // --bc-dm: #242424;
+  // --txt-dm: #eeeeee;
+  --bc: #eeeeee;
+  --txt: #242424;
+  // --nav-bc-dm: #242424;
+  --nav-bc: transparent;
+  --nav-menu-bc: #1a1a1a;
+  --font: 'Montserrat', sans-serif;
+  --input-bc: #eeeeee;
+  --input-brd: rgba(0, 0, 0, 0.5);
+  --input-c: #242424;
+  --btn-bc: rgb(50, 50, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  min-width: 320px;
+  background-color: var(--bc);
+  color: var(--txt);
+  transition: background 0.3s ease-in-out;
+
+  &.dark {
+    --bc: #242424;
+    --txt: #eeeeee;
+    --input-bc: #343434;
+    --input-brd: rgba(255, 255, 255, 0.5);
+    --input-c: #eeeeee;
+    --btn-bc: #1a1a1a;
+  }
+
+  &.light {
+    --bc: #eeeeee;
+    --txt: #242424;
+    --nav-menu-bc: #d0d0d0;
+  }
+}
+
+.page {
+  width: 100%;
+}
+
+.entry {
+  width: 300px;
+  height: 40px;
+  border: 1px solid var(--input-brd);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--input-bc);
+  color: var(--input-c);
+  padding: 0px 1rem;
+  font-family: var(--font);
+}
+
+.disable-entry {
+  margin-left: 1rem;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid var(--input-brd);
+  // border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--input-c);
+  padding: 0px 1rem;
+  font-family: var(--font);
+}
+
+.btn {
+  // width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font);
+  background-color: var(--btn-bc);
+  color: white;
+  cursor: pointer;
+  transition: 
+    border-color 0.25s,
+    background-color 0.3s ease-in-out
+  ;
+
+  &:hover {
+    border-color: #646cff;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

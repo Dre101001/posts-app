@@ -1,0 +1,47 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  padding-top: 3rem;
+  overflow-y: scroll;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+
+    input {
+      flex: 1;
+    }
+
+    button {
+      background-color: blue;
+      padding: 0 1rem;
+      margin: 0;
+    }
+
+    @media only screen and (max-width: 670px) {
+      width: 500px;
+    }
+
+    @media only screen and (max-width: 552px) {
+      width: 400px;
+    }
+
+    @media only screen and (max-width: 452px) {
+      width: 300px;
+    }
+  }
+
+  .post-sec {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,41 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--txt);
+  border-radius: 10px;
+  padding: 1rem;
+
+  .top-sec {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--txt);
+
+    .display-avatar {
+      img {
+        border: 1px solid var(--txt);
+      }
+    }
+  }
+
+  .content-sec {
+    width: 600px;
+    padding-top: 1rem;
+
+    @media only screen and (max-width: 670px) {
+      width: 500px;
+    }
+
+    @media only screen and (max-width: 552px) {
+      width: 400px;
+    }
+
+    @media only screen and (max-width: 452px) {
+      width: 300px;
+    }
+
+    @media only screen and (max-width: 452px) {
+      width: 280px;
+    }
+  }
+}

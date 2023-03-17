@@ -1,0 +1,145 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 60px;
+  background-color: var(--nav-bc);
+  color: var(--txt);
+  // overflow: hidden;
+  // border: 1px solid red;
+
+  .nav {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: flex-end;
+    
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    
+      span {
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+
+    .lg-screen {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      li {
+        list-style: none;
+
+        span {
+          cursor: pointer;
+          color: var(--txt);
+        }
+
+        .link {
+          color: var(--txt);
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: rgb(99, 99, 255);
+          }
+        }
+      }
+    }
+
+    .sm-screen {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      display: none;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      padding-right: 4rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+      padding: 0px 1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .lg-screen {
+        display: none;
+      }
+
+      .sm-screen {
+        display: flex;
+        position: relative;
+        z-index: 10;
+        // border: 1px solid red;
+
+        .menu-btn-open {
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          svg {
+            width: 30px;
+            height: 30px;
+            color: var(--txt);
+          }
+        }
+
+        ul {
+          display: none;
+          background-color: var(--nav-menu-bc);
+          position: absolute;
+          top: 60px;
+          right: 0;
+          // height: 300px;
+          width: 300px;
+          padding: 2rem;
+          z-index: 1000;
+
+          .menu-btn-close {
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            svg {
+              width: 30px;
+              height: 30px;
+              color: var(--txt);
+            }
+          }
+
+          li {
+            list-style: none;
+            
+            .link {
+              color: var(--txt);
+              text-decoration: none;
+            }
+          }
+
+          &.active {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+          }
+        }
+
+        // &.active {
+        //   display: none;
+        // }
+      }
+    }
+  }
+}
+

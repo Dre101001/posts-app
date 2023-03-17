@@ -1,0 +1,15 @@
+.update-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 2rem;
+
+  ul {
+    padding-top: 2rem;
+
+    li {
+      margin: 1rem 0px;
+    }
+  }
+}
